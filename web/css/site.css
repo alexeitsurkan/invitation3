@@ -1,0 +1,17 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Cormorant Infant', serif;
+
+    background: transparent url(/img/mainfon.jpg) 0 0 repeat;
+}
+
+.content {
+    position: relative;
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    vertical-align: middle;
+}

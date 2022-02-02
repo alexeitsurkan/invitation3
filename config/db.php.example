@@ -1,0 +1,16 @@
+<?php
+//создайте в текущей директории файл: db.php с содержимым этого файла
+return [
+    'class' => 'yii\db\Connection',
+    'dsn' => 'mysql:host=db;dbname=invitation_00',
+    'username' => 'invitation_00',
+    'password' => '123456',
+    'charset' => 'utf8',
+    'enableSchemaCache' => true,
+
+    // Продолжительность кеширования схемы.
+    'schemaCacheDuration' => 3600,
+
+    // Название компонента кеша, используемого для хранения информации о схеме
+    'schemaCache' => 'cache',
+];

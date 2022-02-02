@@ -1,0 +1,54 @@
+version: '3.2'
+
+services:
+
+  basic:
+    build:
+      context: docker
+    ports:
+      - 88:80
+    volumes:
+      # Re-use local composer cache via host-volume
+      - ~/.composer-docker/cache:/root/.composer/cache:delegated
+      # Mount source-code for development
+      - ./:/app
+    environment:
+      XDEBUG_CONFIG: "remote_host=192.168.238.1 remote_port=9005 remote_enable=1"
+      PHP_IDE_CONFIG: "serverName=Docker"
+    links:
+      - db
+    depends_on:
+      - db
+    networks:
+      - internal
+
+  db:
+    image: mariadb:10.2.36
+    environment:
+      - MYSQL_ROOT_PASSWORD=Z4SZX7PdXg
+      - MYSQL_DATABASE=invitation_00
+      - MYSQL_USER=invitation_00
+      - MYSQL_PASSWORD=123456
+    restart: always
+    volumes:
+      - ./database/data1:/var/lib/mysql
+    ports:
+      - 3306:3306
+    networks:
+      - internal
+
+  myadmin:
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    ports:
+      - 90:80
+    networks:
+      - internal
+
+networks:
+  internal:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.168.238.0/28

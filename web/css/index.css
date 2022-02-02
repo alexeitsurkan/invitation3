@@ -1,0 +1,64 @@
+
+.header .content {
+    text-align: center;
+    font-size: 22px;
+    background: top 30% center/800px url(/img/ramka.png) no-repeat;
+    padding-top: 15%;
+    color: #562a21;
+}
+
+.header .content .logo {
+    font-size: 220%;
+    font-weight: bold;
+    padding: 40px;
+    line-height: 20px;
+}
+
+.header .content .logo .span {
+    padding: 40px;
+}
+
+.header .content .logo .he {
+    margin-left: -12%;
+}
+
+.header .content .logo .she {
+    margin-left: +12%;
+}
+
+@media (max-width: 911px) {
+    .header .content {
+        background: top 40% center/824px url(/img/ramka.png) no-repeat;
+        padding-top: 6%;
+    }
+    .header .content .logo {
+        padding: 24px;
+        line-height: 15px;
+    }
+    .header .content .logo .he {
+        margin-left: -35%;
+    }
+
+    .header .content .logo .she {
+        margin-left: +35%;
+    }
+}
+
+@media (max-width: 550px) {
+    .header .content {
+        background: top 18% center/560px url(/img/ramka.png) no-repeat;
+        padding-top: 60%;
+    }
+
+    .header .content .logo .he {
+        margin-left: -53%;
+    }
+
+    .header .content .logo .she {
+        margin-left: +53%;
+    }
+}
+
+@media (max-width: 360px) {
+
+}

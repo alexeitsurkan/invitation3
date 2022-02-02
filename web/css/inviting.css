@@ -1,0 +1,78 @@
+
+.inviting .text {
+    padding: 40px;
+    text-align: center;
+}
+
+.inviting .control_button {
+    text-align: center;
+    font-size: 29px;
+}
+
+.inviting .success {
+    outline: none;
+    color: #27882f;
+    border: 1px solid #27882f;
+}
+
+.inviting .danger {
+    outline: none;
+    color: red;
+    border: 1px solid red;
+}
+
+.inviting .control {
+    text-align: center;
+}
+
+.inviting .content .btn {
+    color: #fff;
+    background: #562a21c9;
+    outline: none;
+    border: none;
+    margin: 0 32px;
+    font-size: 31px;
+}
+
+.inviting .control .b-success {
+    color: #86d08c;
+}
+
+.inviting .control .b-danger {
+    color: #d04247;
+}
+
+@media (max-width: 1000px) {
+    .ungle {
+        width: 100px;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .inviting .control .btn {
+        font-size: 22px;
+        margin: 0 25px;
+    }
+
+    .ungle {
+        width: 75px;
+    }
+
+    .inviting .text {
+        padding: 20px;
+        padding-bottom: 0;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .ungle {
+        width: 50px;
+    }
+
+    .inviting .control .btn {
+        font-size: 18px;
+        margin: 0 10px;
+    }
+}

@@ -1,0 +1,7 @@
+.idea
+/vendor
+/database
+composer.phar
+/web/assets
+
+/node_modules/
